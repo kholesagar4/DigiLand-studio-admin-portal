@@ -27,7 +27,10 @@ const CreateToken = () => {
 
       const response = await axios.post(
         `${envConfig.PUBLIC_BASE_URL}/${commonConstants.createToken}`,
-        body
+        body,
+        {
+          headers: { 'Content-Type': 'application/json' },
+        },
       );
 
       if (!response.data) {

@@ -45,7 +45,10 @@ const MintToken = () => {
       // Making the POST request to mint the token
       const response = await axios.post(
         `${envConfig.PUBLIC_BASE_URL}/${commonConstants.mintToken}`,
-        body
+        body,
+        {
+          headers: { 'Content-Type': 'application/json' },
+        },
       );
 
       if (!response.data) {
