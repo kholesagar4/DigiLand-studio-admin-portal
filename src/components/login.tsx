@@ -109,7 +109,7 @@ const Login = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-e-lg lg:rounded-bl-none bg-cover bg-center bg-[url('public/land-login.svg')]">
+                <div className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-e-lg lg:rounded-bl-none bg-cover bg-center bg-[url('/land-login.png')]">
                   <div className="px-4 py-6 text-white md:mx-6 md:p-12 ">
                     <h4 className="mb-6 text-xl font-semibold text-green-100">
                       Connecting You to the Land
