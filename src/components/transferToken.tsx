@@ -236,22 +236,32 @@ const TransferToken = () => {
             </div>
 
             {showSuccessPopup && (
-              <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div
-                  className="bg-green-100 text-green-800 p-6 rounded-lg shadow-lg transition-opacity opacity-0 animate-fade-in"
-                  style={{ animationDuration: "1s" }}
-                >
-                  <h3 className="text-xl font-semibold">Success!</h3>
-                  <p>Token Transferred Successfully!</p>
-                  <button
-                    className="mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
-                    onClick={() => setShowSuccessPopup(false)}
+                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                  <div
+                    className={`bg-green-200 text-green-800 p-10 rounded-xl shadow-2xl transition-all transform ${
+                      showSuccessPopup
+                        ? "opacity-100 scale-100"
+                        : "opacity-0 scale-75"
+                    } animate-fade-in`}
+                    style={{ animationDuration: "1s", width: "500px" }}
                   >
-                    Close
-                  </button>
+                    <h3 className="text-3xl font-bold animate-bounce">
+                      Success!
+                    </h3>
+                    <p className="mt-4 text-lg">Token Transferred Successfully!</p>
+                    <p className="text-md text-gray-600">
+                      Your token has been transferred successfully. You can now view
+                      the details.
+                    </p>
+                    <button
+                      className="justify-center items-center mt-6 px-6 py-3 bg-green-600 text-white rounded-lg text-lg hover:bg-green-700 hover:scale-105 transform transition-transform duration-300"
+                      onClick={() => setShowSuccessPopup(false)}
+                    >
+                      Close
+                    </button>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
           </div>
         </main>
       </div>
