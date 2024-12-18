@@ -24,9 +24,6 @@ const PauseToken = () => {
       const response = await axios.post(
         `${envConfig.PUBLIC_BASE_URL}/${commonConstants.pauseToken}`,
         body,
-        {
-          headers: { 'Content-Type': 'application/json' },
-        },
       );
 
       if (!response?.data) {
